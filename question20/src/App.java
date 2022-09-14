@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
+
         
         Scanner scanner = new Scanner(System.in);
 
@@ -23,14 +24,20 @@ public class App {
 
             if (renda > 50 && renda < 500) {
                 boleto_final = consumo_energetico - 50;
+                System.out.printf("R$ %.2f", boleto_final);
+
             }
             else if(renda > 500 && renda < 1000){
                 boleto_final = consumo_energetico - 25;
+                System.out.printf("R$ %.2f", boleto_final);
             }
+            
             else{
-                System.out.println("Opção inválida!");
-            }
+                
+            System.out.println("Renda ou Consumo Energético não pode ser negativa!");
+         }
         }
+        
         else if(cidade.equals("I")){
 
             System.out.print("Digite sua renda mensal: R$ ");
@@ -40,14 +47,20 @@ public class App {
 
             if (renda > 240 && renda < 1000) {
                 boleto_final = consumo_energetico - 240;
+                System.out.printf("R$ %.2f", boleto_final);
+    
             }
             else if(renda > 1000 && renda < 5000){
                 boleto_final = consumo_energetico - 120;
+                System.out.printf("R$ %.2f", boleto_final);
+    
             }
-            else{
-                System.out.println("Opção inválida!");
+            else{   
+               
+            System.out.println("Renda ou Consumo Energético não pode ser negativa!");
             }
         }
+        
         else if(cidade.equals("T")){
 
             System.out.print("Digite sua renda mensal: R$ ");
@@ -57,18 +70,22 @@ public class App {
 
             if (renda > 5000 && renda < 10000) {
                 boleto_final = consumo_energetico - 720;
+                System.out.printf("R$ %.2f", boleto_final);
+    
             }
             else if(renda > 10000 && renda < 20000){
                 boleto_final = consumo_energetico - 360;
+                System.out.printf("R$ %.2f", boleto_final);
+    
             }
             else{
-                System.out.println("Opção inválida!");
+                
+            System.out.println("Renda ou Consumo Energético não pode ser negativa!");
             }
+        }  
+    }      
         }
-        else{
-            System.out.println("Opção inválida!");
-        }
+    
 
-        System.out.printf("R$ %.2f", boleto_final);
-    }
-}
+
+    
